@@ -1,0 +1,73 @@
+/* -- This specific Hack-A-Day project -- */
+
+form.paste-create {
+    margin: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+textarea.text {
+    height: 500px !important;
+}
+
+.paste {
+    background-color: lightblue;
+    border-radius: 10px;
+    padding: 15px;
+    /*min-height: 300px;*/
+    margin: 10px 0 30px 0;
+    border: 2px solid black;
+}
+
+.paste-title {
+    font-size: larger;
+    font-variant: small-caps;
+}
+
+.byline {
+    display: block;
+    font-size: small;
+    font-style: italic;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.paste-raw-link {
+    float: right
+}
+.paste-raw-link::before {
+    content: "[";
+}
+.paste-raw-link::after {
+    content: "]";
+}
+
+.paste-text {
+    white-space: pre-wrap;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: monospace;
+}
+
+/* -- All Hack-A-Day projects -- */
+.about {
+    white-space: pre-wrap;
+}
+.footer {
+    background-color: rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+.footer ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.navbar-brand-link a {
+    color: #777;
+}
+.navbar-brand-link a:hover {
+    color: #000;
+    text-decoration: none;
+}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ paste.title }}{% endblock %}
+{% block header %}
+{% endblock %}
+
+{% block content %}
+    <div class="paste">
+        <div>
+            <a class="paste-title" href="{{ url_for("view", paste_id=paste.id) }}">{{ paste.title }}</a>
+            <a class="paste-raw-link" href="{{ url_for("view_raw", paste_id=paste.id) }}">Raw</a>
+        </div>
+        <span class="byline">posted <span class="date">{{ paste.creation_time.strftime("%Y-%m-%d %H:%M") }}</span> by {{ paste.author }}</span>
+        <div class="paste-text">{{ paste.content }}</div>
+    </div>
+{% endblock %}

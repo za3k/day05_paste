@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}{{ project_name }}{% endblock %}</h1>
+    {{ project_name }} is a pastebin, free for anyone to use. Just create a paste below.
+{% endblock %}
+
+{% block content %}
+<form method="post" action="create" class="paste-create">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input class="form-control" name="title" id="label" placeholder="untitled paste"/>
+    </div>
+    <div class="form-group">
+        <label for="author">Author</label>
+		{% if current_user.is_authenticated %}
+        <span id="author">{{ current_user.id }}</span>
+		{% else %}
+        <span id="author">anonymous</span>
+		{% endif %}
+    </div>
+    <div class="form-group">
+        <label for="text">Paste content</label>
+        <textarea class="form-control text" name="text" placeholder="type paste here"></textarea>
+    </div>
+    <input class="btn btn-primary" type="submit" name="submit" value="Create Paste">
+</form>
+
+</form>
+{% endblock %}
